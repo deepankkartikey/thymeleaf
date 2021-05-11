@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Iterate</title>
+</head>
+<body>
+	Iterate in Thymeleaf
+	<h1 th:text="${names}"></h1>
+	<ul>
+		<li th:each="name,status : ${names}"><span
+			th:style="${status.even} ? 'font-weight:bold':'color:green'"
+			th:text="${name}"></span></li>
+	</ul>
+</body>
+</html>
