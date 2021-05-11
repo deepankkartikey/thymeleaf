@@ -9,6 +9,14 @@
 		<span th:text="${#strings.toUpperCase(name)}"></span> is learning
 		Thymeleaf
 	</h1>
+	<footer id="hostTag" th:include="footer::f1">
+	</footer>
+	
+	<footer id="hostTag" th:insert="footer::f1">
+	</footer>
+	
+	<footer id="hostTag" th:replace="footer::f1">
+	</footer>
 
 </body>
 </html>
