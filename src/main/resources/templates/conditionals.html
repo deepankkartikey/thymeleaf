@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Conditionals</title>
+</head>
+<body>
+	<h1>Conditionals in ThymeLeaf</h1>
+	<!-- Elvis operator -->
+	<span th:style="${isActive} ? 'color:green' : 'color:red'" 
+		  th:text="${isActive} ? 'Active' : 'Not Active'">
+	</span><br/>
+	<!-- If Unless Operator -->
+	<span th:if="${gender} == 'M'" th:text="MALE"></span>
+	<span th:unless="${gender} == 'M'" th:text="FEMALE"></span>
+	<br/>
+	<!-- Switch-Case -->
+	<span th:switch="${#lists.size(elements)}">
+		<span th:case="'0'">No Elements</span>
+		<span th:case="'1'">One Element</span>
+		<span th:case="*">Many Elements</span>
+	</span>
+</body>
+</html>

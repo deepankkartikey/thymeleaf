@@ -24,4 +24,12 @@ public class MyController {
 		m.addAttribute("names", names);
 		return "iterate";
 	}
+
+	@GetMapping(value = "/conditionals")
+	public String conditionalsHandler(Model m) {
+		m.addAttribute("isActive", "true");
+		m.addAttribute("gender","M");
+		m.addAttribute("elements", List.of(12, 34, 21, 32, 51));
+		return "conditionals";
+	}
 }
